@@ -29,6 +29,6 @@ jobs:
             python3 manage.py test
         - name: Build and push the image
           run: |
-            docker login --username arav28 --password ${{secrets.ROOT_ACCESS}} ghcr.io
+            docker login --username arav28 --password ${{secrets.ROOT_ACCESS_3}} ghcr.io
             docker build -t ghcr.io/arav28/ciphers-service:latest --file Dockerfile .
             docker push ghcr.io/arav28/ciphers-service:latest
